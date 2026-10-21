@@ -103,7 +103,8 @@ def test_unsupported_year_type_fails(bad):
 
 
 @pytest.mark.parametrize(
-    "invalid", [float("nan"), float("inf"), float("-inf"), True, "2025.5", None, 0.1, 10000.0]
+    "invalid",
+    [float("nan"), float("inf"), float("-inf"), True, "2025.5", None, 0.1, 10000.0],
 )
 @pytest.mark.parametrize("slot", [0, 1])
 def test_plate_motion_invalid_decimal_years(invalid, slot):
